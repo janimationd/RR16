@@ -1,6 +1,8 @@
 #ifndef RR16_H_
 #define RR16_H_
 
+// In this file goes information about the arena, the regulations, and our robot
+// ... so mainly sizes and distances
 
 #define ARENA_X_LENGTH 96.f  // length of arena [inches]
 #define ARENA_Y_WIDTH 48.f  // width of arena [inches]

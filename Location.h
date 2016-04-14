@@ -16,6 +16,11 @@ public:
     y = yy;
   }
 
+  Location() {
+    x = 0;
+    y = 0;
+  }
+
   // calculate the distance between me and 'l'
   float distanceTo(Location l) {
     float distX = l.x - x;
