@@ -1,6 +1,8 @@
 #ifndef LOCATION_H_
 #define LOCATION_H_
 
+#include <cmath>
+
 // A location in the arena, measured in inches.
 class Location {
 public:
@@ -18,9 +20,17 @@ public:
   float distanceTo(Location l) {
     float distX = l.x - x;
     float distY = l.y - y;
-    return sqrt(distX * distX + distY * distY);
+    return std::sqrt(distX * distX + distY * distY);
   }
 };
 
+// returns true if location is reliable, false otherwise (unreliable locations happen when sensor output is unreliable)
+// puts the current location of the center of the robot into 'loc'
+bool getLocation(Location &loc) {
+  float x = 0;  // the x position back from the distance sensor logic
+  float y = 0;  // the y position back from the distance sensor logic
+  loc = Location(x, y);
+  return true;
+}
 
 #endif
