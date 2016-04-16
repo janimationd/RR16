@@ -29,13 +29,4 @@ public:
   }
 };
 
-// returns true if location is reliable, false otherwise (unreliable locations happen when sensor output is unreliable)
-// puts the current location of the center of the robot into 'loc'
-bool getLocation(Location &loc) {
-  float x = 0;  // the x position back from the distance sensor logic
-  float y = 0;  // the y position back from the distance sensor logic
-  loc = Location(x, y);
-  return true;
-}
-
 #endif
